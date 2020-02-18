@@ -25,3 +25,4 @@ epi_judge_java/java_build/
 
 .DS_Store
 /epi_judge_cpp/*.build
+/epi_judge_cpp/epi_judge_cpp.xcodeproj/project.xcworkspace

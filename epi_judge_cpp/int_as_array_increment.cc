@@ -1,9 +1,24 @@
+#include <algorithm>
 #include <vector>
 #include "test_framework/generic_test.h"
 using std::vector;
 vector<int> PlusOne(vector<int> A) {
   // TODO - you fill in here.
-  return {};
+    auto result = vector<int>{};
+    int carry = 1, i = A.size() - 1;
+    
+    while (carry > 0 && i >= 0) {
+        result.push_back((A[i]+1)%10);
+        carry = (A[i--]+1)/10;
+    }
+    while (i >= 0) {
+        result.push_back(A[i--]);
+    }
+    if (carry > 0)
+        result.push_back(1);
+    std::reverse(result.begin(), result.end());
+
+    return result;
 }
 
 int main(int argc, char* argv[]) {

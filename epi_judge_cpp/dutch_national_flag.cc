@@ -8,7 +8,20 @@ typedef enum { kRed, kWhite, kBlue } Color;
 
 void DutchFlagPartition(int pivot_index, vector<Color>* A_ptr) {
   // TODO - you fill in here.
-  return;
+    auto& A = *A_ptr;
+    auto pivot_element = A[pivot_index];
+    int small = 0, equal = 0, large = A.size() - 1;
+    
+    while (equal <= large) {
+        if (A[equal] < pivot_element)
+            std::swap(A[small++], A[equal++]);
+        else if (A[equal] == pivot_element)
+            ++equal;
+        else
+            std::swap(A[equal], A[large--]);
+    }
+
+    return;
 }
 void DutchFlagPartitionWrapper(TimedExecutor& executor, const vector<int>& A,
                                int pivot_idx) {

@@ -30,8 +30,8 @@ bool CanReachEnd(const vector<int>& max_advance_steps) {
 //        result[i].first = true;
 //    };
 //    helper(0);
-    int furthest_reach = 0;
-    for (auto i = 0; i <= furthest_reach && i < n; ++i) {
+    int furthest_reach = max_advance_steps[0];
+    for (auto i = 1; i <= furthest_reach && i < n; ++i) {
         furthest_reach = std::max(furthest_reach, i + max_advance_steps[i]);
     }
 

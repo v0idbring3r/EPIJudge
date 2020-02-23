@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13B940E024022ED300B21990 /* minimum_steps_to_reach_end_of_array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13B940DF24022ED300B21990 /* minimum_steps_to_reach_end_of_array.cpp */; };
 		13BCB7A223F96C6E001BDBFE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13BCB7A123F96C6E001BDBFE /* main.cpp */; };
 		13BCB7A923F99586001BDBFE /* sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13BCB7A823F99586001BDBFE /* sort.cpp */; };
 		13BCB7AB23F99591001BDBFE /* search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13BCB7AA23F99591001BDBFE /* search.cpp */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		13B940DF24022ED300B21990 /* minimum_steps_to_reach_end_of_array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = minimum_steps_to_reach_end_of_array.cpp; sourceTree = "<group>"; };
 		13BCB79E23F96C6E001BDBFE /* DSAlgo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DSAlgo; sourceTree = BUILT_PRODUCTS_DIR; };
 		13BCB7A123F96C6E001BDBFE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		13BCB7A823F99586001BDBFE /* sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sort.cpp; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13B940DE24022EA900B21990 /* problems */ = {
+			isa = PBXGroup;
+			children = (
+				13B940DF24022ED300B21990 /* minimum_steps_to_reach_end_of_array.cpp */,
+			);
+			path = problems;
+			sourceTree = "<group>";
+		};
 		13BCB79523F96C6E001BDBFE = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		13BCB7A023F96C6E001BDBFE /* DSAlgo */ = {
 			isa = PBXGroup;
 			children = (
+				13B940DE24022EA900B21990 /* problems */,
 				13BCB7A123F96C6E001BDBFE /* main.cpp */,
 				13BCB7AC23F99873001BDBFE /* dec.h */,
 				13BCB7AA23F99591001BDBFE /* search.cpp */,
@@ -128,6 +139,7 @@
 			files = (
 				13BCB7A223F96C6E001BDBFE /* main.cpp in Sources */,
 				13BCB7AB23F99591001BDBFE /* search.cpp in Sources */,
+				13B940E024022ED300B21990 /* minimum_steps_to_reach_end_of_array.cpp in Sources */,
 				13BCB7A923F99586001BDBFE /* sort.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

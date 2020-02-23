@@ -1,38 +1,41 @@
-#include <pair>
+#include <algorithm>
 #include <vector>
 #include "test_framework/generic_test.h"
 using std::vector;
-using std::pair;
 bool CanReachEnd(const vector<int>& max_advance_steps) {
     const auto n = max_advance_steps.size();
-    vector<pair<bool, bool>> result(n, std::make_pair(false, false));
-    result[n-1].first = result[n-1].second = true;
+//    vector<pair<bool, bool>> result(n, std::make_pair(false, false));
+//    result[n-1].first = result[n-1].second = true;
+//
+//    auto helper = [&](int i) -> void
+//    {
+//        if (result[i].first)
+//            return result[i].second;
+//
+//        if (i + max_advance_steps[i] >= n - 1)
+//        {
+//            result[i].first = result[i].second = true;
+//            return;
+//        }
+//
+//        for (int j = i+1; j < n && j <= i+max_advance_steps[i]; ++j)
+//        {
+//            if (auto res = helper(j))
+//            {
+//                result[i].first = result[i].second = true;
+//                return;
+//            }
+//        }
+//
+//        result[i].first = true;
+//    };
+//    helper(0);
+    int furthest_reach = 0;
+    for (auto i = 0; i <= furthest_reach && i < n; ++i) {
+        furthest_reach = std::max(furthest_reach, i + max_advance_steps[i]);
+    }
 
-    auto helper = [&](int i) -> void
-    {
-        if (result[i].first)
-            return result[i].second;
-
-        if (i + max_advance_steps[i] >= n - 1)
-        {
-            result[i].first = result[i].second = true;
-            return;
-        }
-
-        for (int j = i+1; j < n && j <= i+max_advance_steps[i]; ++j)
-        {
-            if (auto res = helper(j))
-            {
-                result[i].first = result[i].second = true;
-                return;
-            }
-        }
-        
-        result[i].first = true;
-    };
-    helper(0);
-
-    return result[0].second;
+    return (furthest_reach >= n-1);
 }
 
 int main(int argc, char* argv[]) {

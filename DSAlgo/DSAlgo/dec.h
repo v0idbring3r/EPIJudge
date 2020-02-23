@@ -9,7 +9,10 @@
 #include <iostream>
 #include <vector>
 
-using std::vector;
+using namespace std;
 
 void bubble_sort(vector<int>& v);
 void quicksort(vector<int>&v);
+
+
+int sorted_array_m_times(vector<int>& arr, int m);

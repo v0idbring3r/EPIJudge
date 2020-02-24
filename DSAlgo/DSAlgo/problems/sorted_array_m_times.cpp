@@ -1,7 +1,4 @@
-#include <algorithm>
-#include <vector>
-
-using namespace std;
+#include "dec.h"
 
 int sorted_array_m_times(vector<int>& arr, int m) {
     int count = min(2, m), valid_count;

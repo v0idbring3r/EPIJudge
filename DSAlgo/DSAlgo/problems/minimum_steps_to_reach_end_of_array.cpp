@@ -1,15 +1,4 @@
-//
-//  minimum_steps_to_reach_end_of_array.cpp
-//  DSAlgo
-//
-//  Created by Angad Pal Singh on 23/02/20.
-//  Copyright © 2020 abc. All rights reserved.
-//
-
-#include <algorithm>
-#include <vector>
-
-using namespace std;
+#include "dec.h"
 
 int minimum_steps_to_reach_end_of_array(const vector<int>& arr, int n)
 {

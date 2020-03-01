@@ -17,3 +17,4 @@ void quicksort(vector<int>&v);
 
 int sorted_array_m_times(vector<int>& arr, int m);
 int longest_subarray_with_equal_entries(const vector<int>& arr);
+void inverse_permutation(vector<int>& inp);
